@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2020-08-05T09:26:02+08:00 ] 127.0.0.1 GET turtleadmin.com/index/user/index.html
+[ error ] [0]类型错误: Too few arguments to function app\common\model\User::score(), 0 passed in P:\www\turtleadmin\thinkphp\library\think\Model.php on line 620 and exactly 3 expected
+---------------------------------------------------------------
+[ 2020-08-05T09:27:15+08:00 ] 127.0.0.1 GET turtleadmin.com/index/user/index.html
+[ error ] [0]类型错误: Too few arguments to function app\common\model\User::score(), 0 passed in P:\www\turtleadmin\thinkphp\library\think\Model.php on line 620 and exactly 3 expected
