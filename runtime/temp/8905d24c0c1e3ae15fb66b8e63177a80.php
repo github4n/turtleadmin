@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\index.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\index.html";i:1596593879;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -135,20 +135,20 @@
                                         </div>
                                         <div class="col-xs-4 col-md-2"><?php echo __('Score'); ?></div>
                                         <div class="col-xs-8 col-md-4">
-                                            <a href="javascript:;" class="viewscore"><?php echo $user['score']; ?></a>
+                                            <a href="javascript:;" class="viewscore">0</a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-4 col-md-2"><?php echo __('Successions'); ?></div>
-                                        <div class="col-xs-8 col-md-4"><?php echo $user['successions']; ?> <?php echo __('Day'); ?></div>
+                                        <div class="col-xs-8 col-md-4">2 <?php echo __('Day'); ?></div>
                                         <div class="col-xs-4 col-md-2"><?php echo __('Maxsuccessions'); ?></div>
-                                        <div class="col-xs-8 col-md-4"><?php echo $user['maxsuccessions']; ?> <?php echo __('Day'); ?></div>
+                                        <div class="col-xs-8 col-md-4">3 <?php echo __('Day'); ?></div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-4 col-md-2"><?php echo __('Logintime'); ?></div>
-                                        <div class="col-xs-8 col-md-4"><?php echo date("Y-m-d H:i:s",$user['logintime']); ?></div>
+                                        <div class="col-xs-8 col-md-4">4</div>
                                         <div class="col-xs-4 col-md-2"><?php echo __('Prevtime'); ?></div>
-                                        <div class="col-xs-8 col-md-4"><?php echo date("Y-m-d H:i:s",$user['prevtime']); ?></div>
+                                        <div class="col-xs-8 col-md-4">5</div>
                                     </div>
                                 </div>
                             </div>

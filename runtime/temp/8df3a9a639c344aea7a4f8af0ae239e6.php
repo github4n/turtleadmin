@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\login.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\login.html";i:1596591213;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -83,7 +83,7 @@
                 <div class="form-group">
                     <label class="control-label" for="account"><?php echo __('Account'); ?></label>
                     <div class="controls">
-                        <input class="form-control input-lg" id="account" type="text" name="account" value="" data-rule="required" placeholder="<?php echo __('Email/Mobile/Username'); ?>" autocomplete="off">
+                        <input class="form-control input-lg" id="account" type="text" name="account" value="" data-rule="required" placeholder="<?php echo __('Mobile'); ?>" autocomplete="off">
                         <div class="help-block"></div>
                     </div>
                 </div>

@@ -164,31 +164,33 @@ class Auth
     /**
      * 用户登录
      *
-     * @param string $account  账号,用户名、邮箱、手机号
+     * @param string $account  账号 手机号
      * @param string $password 密码
      * @return boolean
      */
     public function login($account, $password)
     {
-        $field = Validate::is($account, 'email') ? 'email' : (Validate::regex($account, '/^1\d{10}$/') ? 'mobile' : 'username');
-        $user = User::get([$field => $account]);
+//        return '1515';
+//        $field = Validate::is($account, 'email') ? 'email' : (Validate::regex($account, '/^1\d{10}$/') ? 'mobile' : 'username');
+//        $field =  'mobile';
+        $user=Db::name('user')->where(array('mobile'=>$account))->find();
+//        $user = User::get([$field => $account]);
+
         if (!$user) {
             $this->setError('Account is incorrect');
             return false;
         }
-
-        if ($user->status != 'normal') {
+        if ($user['status'] != 'normal') {
             $this->setError('Account is locked');
             return false;
         }
-        if ($user->password != $this->getEncryptPassword($password, $user->salt)) {
+
+        if ($user['password'] != $this->getEncryptPassword($password, $user['salt'])) {
             $this->setError('Password is incorrect');
             return false;
         }
-
         //直接登录会员
-        $this->direct($user->id);
-
+        $this->direct($user['id']);
         return true;
     }
 
@@ -260,23 +262,23 @@ class Auth
         if ($user) {
             Db::startTrans();
             try {
-                $ip = request()->ip();
-                $time = time();
+//                $ip = request()->ip();
+//                $time = time();
 
                 //判断连续登录和最大连续登录
-                if ($user->logintime < \fast\Date::unixtime('day')) {
-                    $user->successions = $user->logintime < \fast\Date::unixtime('day', -1) ? 1 : $user->successions + 1;
-                    $user->maxsuccessions = max($user->successions, $user->maxsuccessions);
-                }
+//                if ($user->logintime < \fast\Date::unixtime('day')) {
+//                    $user->successions = $user->logintime < \fast\Date::unixtime('day', -1) ? 1 : $user->successions + 1;
+//                    $user->maxsuccessions = max($user->successions, $user->maxsuccessions);
+//                }
 
-                $user->prevtime = $user->logintime;
+//                $user->prevtime = $user->logintime;
                 //记录本次登录的IP和时间
-                $user->loginip = $ip;
-                $user->logintime = $time;
+//                $user->loginip = $ip;
+//                $user->logintime = $time;
                 //重置登录失败次数
-                $user->loginfailure = 0;
+//                $user->loginfailure = 0;
 
-                $user->save();
+//                $user->save();
 
                 $this->_user = $user;
 

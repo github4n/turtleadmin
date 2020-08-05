@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"P:\www\turtleadmin\public/../application/index\view\user\profile.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"P:\www\turtleadmin\public/../application/index\view\user\profile.html";i:1596594357;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -135,48 +135,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-xs-12 col-sm-2"><?php echo __('Username'); ?>:</label>
-                            <div class="col-xs-12 col-sm-4">
-                                <input type="text" class="form-control" id="username" name="username" value="<?php echo htmlentities($user['username']); ?>" data-rule="required;username;remote(<?php echo url('api/validate/check_username_available'); ?>, id=<?php echo $user['id']; ?>)" placeholder="">
-                            </div>
-                        </div>
+
                         <div class="form-group">
                             <label class="control-label col-xs-12 col-sm-2"><?php echo __('Nickname'); ?>:</label>
                             <div class="col-xs-12 col-sm-4">
                                 <input type="text" class="form-control" id="nickname" name="nickname" value="<?php echo htmlentities($user['nickname']); ?>" data-rule="required" placeholder="">
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label for="c-bio" class="control-label col-xs-12 col-sm-2"><?php echo __('Intro'); ?>:</label>
+                            <label for="hbakey" class="control-label col-xs-12 col-sm-2">火币akey:</label>
                             <div class="col-xs-12 col-sm-8">
-                                <input id="c-bio" data-rule="" data-tip="一句话介绍一下你自己" class="form-control" name="bio" type="text" value="<?php echo htmlentities($user['bio']); ?>">
+                                <input id="hbakey" data-rule="" data-tip="请填写火币akey" class="form-control" name="hbakey" type="text" value="<?php echo $user['hbakey']; ?>">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="c-email" class="control-label col-xs-12 col-sm-2"><?php echo __('Email'); ?>:</label>
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="c-email" name="email" value="<?php echo htmlentities($user['email']); ?>" disabled placeholder="">
-                                    <span class="input-group-btn" style="padding:0;border:none;">
-                                        <a href="javascript:;" class="btn btn-info btn-change" data-type="email"><?php echo __('Change'); ?></a>
-                                    </span>
-                                </div>
-
+                            <label for="hbskey" class="control-label col-xs-12 col-sm-2">火币skey:</label>
+                            <div class="col-xs-12 col-sm-8">
+                                <input id="hbskey" data-rule="" data-tip="请填写火币skey" class="form-control" name="hbskey" type="text" value="<?php echo $user['hbskey']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="c-mobile" class="control-label col-xs-12 col-sm-2"><?php echo __('Mobile'); ?>:</label>
-                            <div class="col-xs-12 col-sm-4">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="c-mobile" name="mobile" value="<?php echo htmlentities($user['mobile']); ?>" disabled placeholder="">
-                                    <span class="input-group-btn" style="padding:0;border:none;">
-                                        <a href="javascript:;" class="btn btn-info btn-change" data-type="mobile"><?php echo __('Change'); ?></a>
-                                    </span>
-                                </div>
 
-                            </div>
-                        </div>
                         <div class="form-group normal-footer">
                             <label class="control-label col-xs-12 col-sm-2"></label>
                             <div class="col-xs-12 col-sm-8">

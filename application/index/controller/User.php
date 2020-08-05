@@ -154,6 +154,8 @@ class User extends Frontend
      */
     public function login()
     {
+//        var_dump(111);
+//        exit();
         $url = $this->request->request('url', '');
         if ($this->auth->id) {
             $this->success(__('You\'ve logged in, do not login again'), $url ? $url : url('user/index'));
@@ -164,14 +166,14 @@ class User extends Frontend
             $keeplogin = (int)$this->request->post('keeplogin');
             $token = $this->request->post('__token__');
             $rule = [
-                'account'   => 'require|length:3,50',
+                'account'   => 'require|length:11',
                 'password'  => 'require|length:6,30',
                 '__token__' => 'require|token',
             ];
 
             $msg = [
                 'account.require'  => 'Account can not be empty',
-                'account.length'   => 'Account must be 3 to 50 characters',
+                'account.length'   => 'Account must be 11 characters',
                 'password.require' => 'Password can not be empty',
                 'password.length'  => 'Password must be 6 to 30 characters',
             ];
@@ -186,6 +188,10 @@ class User extends Frontend
                 $this->error(__($validate->getError()), null, ['token' => $this->request->token()]);
                 return false;
             }
+//            $this->error($password);
+//            $res=$this->auth->login($account, $password);
+//            $this->error(strval($res));
+
             if ($this->auth->login($account, $password)) {
                 $this->success(__('Logged in successful'), $url ? $url : url('user/index'));
             } else {
