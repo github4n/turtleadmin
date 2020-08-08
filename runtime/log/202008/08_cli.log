@@ -1,0 +1,53 @@
+[ 2020-08-08T14:12:01+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:12:01+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:12:01+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ 2020-08-08T14:12:01+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:15:08+08:00 ][ info ] [ LANG ] P:\www\turtleadmin\application\admin\lang/zh-cn.php
+[ 2020-08-08T14:16:35+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:16:35+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:16:35+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ 2020-08-08T14:16:35+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:17:39+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:17:39+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:17:39+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ 2020-08-08T14:17:39+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:18:05+08:00 ][ info ] [ LANG ] P:\www\turtleadmin\application\admin\lang/zh-cn.php
+[ 2020-08-08T14:18:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:18:24+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:18:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ 2020-08-08T14:18:24+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002000s ]
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000000s ]
+[ info ] [ LOG ] INIT File
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ CACHE ] INIT File
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001000s ]
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ DB ] INIT mysql
+[ 2020-08-08T14:23:43+08:00 ][ info ] [ LANG ] P:\www\turtleadmin\application\admin\lang/zh-cn.php

@@ -180,7 +180,7 @@ class Auth
             $this->setError('Account is incorrect');
             return false;
         }
-        if ($user['status'] != 'normal') {
+        if ($user['status'] !=1) {
             $this->setError('Account is locked');
             return false;
         }
