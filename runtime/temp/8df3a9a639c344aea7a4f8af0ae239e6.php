@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\login.html";i:1596591213;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\login.html";i:1596850082;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1596850215;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -57,8 +57,9 @@
                             <ul class="dropdown-menu">
                                 <?php if($user): ?>
                                 <li><a href="<?php echo url('user/index'); ?>"><i class="fa fa-user-circle fa-fw"></i><?php echo __('User center'); ?></a></li>
-                                <li><a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i><?php echo __('Profile'); ?></a></li>
                                 <li><a href="<?php echo url('user/changepwd'); ?>"><i class="fa fa-key fa-fw"></i><?php echo __('Change password'); ?></a></li>
+                                <li><a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i><?php echo __('Profile'); ?></a></li>
+
                                 <li><a href="<?php echo url('user/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i><?php echo __('Sign out'); ?></a></li>
                                 <?php else: ?>
                                 <li><a href="<?php echo url('user/login'); ?>"><i class="fa fa-sign-in fa-fw"></i> <?php echo __('Sign in'); ?></a></li>
@@ -96,7 +97,7 @@
                 <div class="form-group">
                     <div class="controls">
                         <input type="checkbox" name="keeplogin" checked="checked" value="1"> <?php echo __('Keep login'); ?> 
-                        <div class="pull-right"><a href="javascript:;" class="btn-forgot"><?php echo __('Forgot password'); ?></a></div>
+                        <!--<div class="pull-right"><a href="javascript:;" class="btn-forgot"><?php echo __('Forgot password'); ?></a></div>-->
                     </div>
                 </div>
                 <div class="form-group">

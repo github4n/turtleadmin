@@ -264,7 +264,6 @@ class User extends Frontend
                 $this->error(__($validate->getError()), null, ['token' => $this->request->token()]);
                 return false;
             }
-
             $ret = $this->auth->changepwd($newpassword, $oldpassword);
             if ($ret) {
                 $this->success(__('Reset password successful'), url('user/login'));

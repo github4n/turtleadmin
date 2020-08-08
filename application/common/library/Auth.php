@@ -231,9 +231,9 @@ class Auth
         if ($this->_user->password == $this->getEncryptPassword($oldpassword, $this->_user->salt) || $ignoreoldpassword) {
             Db::startTrans();
             try {
-                $salt = Random::alnum();
+                $salt = '123456';
                 $newpassword = $this->getEncryptPassword($newpassword, $salt);
-                $this->_user->save(['loginfailure' => 0, 'password' => $newpassword, 'salt' => $salt]);
+                $this->_user->save(['password' => $newpassword, 'salt' => $salt]);
 
                 Token::delete($this->_token);
                 //修改密码成功的事件

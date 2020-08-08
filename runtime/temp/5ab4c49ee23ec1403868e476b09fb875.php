@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"P:\www\turtleadmin\public/../application/index\view\user\profile.html";i:1596594357;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"P:\www\turtleadmin\public/../application/index\view\user\profile.html";i:1596866676;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1596850215;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1596850259;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -57,8 +57,9 @@
                             <ul class="dropdown-menu">
                                 <?php if($user): ?>
                                 <li><a href="<?php echo url('user/index'); ?>"><i class="fa fa-user-circle fa-fw"></i><?php echo __('User center'); ?></a></li>
-                                <li><a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i><?php echo __('Profile'); ?></a></li>
                                 <li><a href="<?php echo url('user/changepwd'); ?>"><i class="fa fa-key fa-fw"></i><?php echo __('Change password'); ?></a></li>
+                                <li><a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i><?php echo __('Profile'); ?></a></li>
+
                                 <li><a href="<?php echo url('user/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i><?php echo __('Sign out'); ?></a></li>
                                 <?php else: ?>
                                 <li><a href="<?php echo url('user/login'); ?>"><i class="fa fa-sign-in fa-fw"></i> <?php echo __('Sign in'); ?></a></li>
@@ -111,8 +112,8 @@
     <ul class="list-group">
         <li class="list-group-heading"><?php echo __('Member center'); ?></li>
         <li class="list-group-item <?php echo $config['actionname']=='index'?'active':''; ?>"> <a href="<?php echo url('user/index'); ?>"><i class="fa fa-user-circle fa-fw"></i> <?php echo __('User center'); ?></a> </li>
-        <li class="list-group-item <?php echo $config['actionname']=='profile'?'active':''; ?>"> <a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i> <?php echo __('Profile'); ?></a> </li>
         <li class="list-group-item <?php echo $config['actionname']=='changepwd'?'active':''; ?>"> <a href="<?php echo url('user/changepwd'); ?>"><i class="fa fa-key fa-fw"></i> <?php echo __('Change password'); ?></a> </li>
+        <li class="list-group-item <?php echo $config['actionname']=='profile'?'active':''; ?>"> <a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i> <?php echo __('Profile'); ?></a> </li>
         <li class="list-group-item <?php echo $config['actionname']=='logout'?'active':''; ?>"> <a href="<?php echo url('user/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> <?php echo __('Sign out'); ?></a> </li>
     </ul>
     <?php echo hook('user_sidenav_after'); ?>
@@ -136,6 +137,12 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="control-label col-xs-12 col-sm-2">用户名:</label>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" class="form-control" readonly id="mobile" name="mobile" value="<?php echo htmlentities($user['mobile']); ?>" data-rule="required" placeholder="">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="control-label col-xs-12 col-sm-2"><?php echo __('Nickname'); ?>:</label>
                             <div class="col-xs-12 col-sm-4">
@@ -204,40 +211,7 @@
         </div>
     </form>
 </script>
-<script type="text/html" id="mobiletpl">
-    <form id="mobile-form" class="form-horizontal form-layer" method="POST" action="<?php echo url('api/user/changemobile'); ?>">
-        <div class="form-body">
-            <input type="hidden" name="action" value="changemobile" />
-            <div class="form-group">
-                <label for="c-mobile" class="control-label col-xs-12 col-sm-3"><?php echo __('New mobile'); ?>:</label>
-                <div class="col-xs-12 col-sm-8">
-                    <input type="text" class="form-control" id="mobile" name="mobile" value="" data-rule="required;mobile;remote(<?php echo url('api/validate/check_mobile_available'); ?>, event=changemobile, id=<?php echo $user['id']; ?>)" placeholder="<?php echo __('New mobile'); ?>">
-                    <span class="msg-box"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="mobile-captcha" class="control-label col-xs-12 col-sm-3"><?php echo __('Captcha'); ?>:</label>
-                <div class="col-xs-12 col-sm-8">
-                    <div class="input-group">
-                        <input type="text" name="captcha" id="mobile-captcha" class="form-control" data-rule="required;length(4);integer[+];remote(<?php echo url('api/validate/check_sms_correct'); ?>, event=changemobile, mobile:#mobile)" />
-                        <span class="input-group-btn" style="padding:0;border:none;">
-                            <a href="javascript:;" class="btn btn-info btn-captcha" data-url="<?php echo url('api/sms/send'); ?>" data-type="mobile" data-event="changemobile">获取验证码</a>
-                        </span>
-                    </div>
-                    <span class="msg-box"></span>
-                </div>
-            </div>
-        </div>
-        <div class="form-footer">
-            <div class="form-group" style="margin-bottom:0;">
-                <label class="control-label col-xs-12 col-sm-3"></label>
-                <div class="col-xs-12 col-sm-8">
-                    <button type="submit" class="btn btn-md btn-info"><?php echo __('Submit'); ?></button>
-                </div>
-            </div>
-        </div>
-    </form>
-</script>
+
 <style>
     .form-layer {height:100%;min-height:150px;min-width:300px;}
     .form-body {

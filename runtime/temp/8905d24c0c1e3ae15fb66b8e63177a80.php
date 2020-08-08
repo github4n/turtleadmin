@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\index.html";i:1596593879;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1588765311;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1588765311;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"P:\www\turtleadmin\public/../application/index\view\user\index.html";i:1596866819;s:61:"P:\www\turtleadmin\application\index\view\layout\default.html";i:1596850215;s:58:"P:\www\turtleadmin\application\index\view\common\meta.html";i:1588765311;s:61:"P:\www\turtleadmin\application\index\view\common\sidenav.html";i:1596850259;s:60:"P:\www\turtleadmin\application\index\view\common\script.html";i:1588765311;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -57,8 +57,9 @@
                             <ul class="dropdown-menu">
                                 <?php if($user): ?>
                                 <li><a href="<?php echo url('user/index'); ?>"><i class="fa fa-user-circle fa-fw"></i><?php echo __('User center'); ?></a></li>
-                                <li><a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i><?php echo __('Profile'); ?></a></li>
                                 <li><a href="<?php echo url('user/changepwd'); ?>"><i class="fa fa-key fa-fw"></i><?php echo __('Change password'); ?></a></li>
+                                <li><a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i><?php echo __('Profile'); ?></a></li>
+
                                 <li><a href="<?php echo url('user/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i><?php echo __('Sign out'); ?></a></li>
                                 <?php else: ?>
                                 <li><a href="<?php echo url('user/login'); ?>"><i class="fa fa-sign-in fa-fw"></i> <?php echo __('Sign in'); ?></a></li>
@@ -94,8 +95,8 @@
     <ul class="list-group">
         <li class="list-group-heading"><?php echo __('Member center'); ?></li>
         <li class="list-group-item <?php echo $config['actionname']=='index'?'active':''; ?>"> <a href="<?php echo url('user/index'); ?>"><i class="fa fa-user-circle fa-fw"></i> <?php echo __('User center'); ?></a> </li>
-        <li class="list-group-item <?php echo $config['actionname']=='profile'?'active':''; ?>"> <a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i> <?php echo __('Profile'); ?></a> </li>
         <li class="list-group-item <?php echo $config['actionname']=='changepwd'?'active':''; ?>"> <a href="<?php echo url('user/changepwd'); ?>"><i class="fa fa-key fa-fw"></i> <?php echo __('Change password'); ?></a> </li>
+        <li class="list-group-item <?php echo $config['actionname']=='profile'?'active':''; ?>"> <a href="<?php echo url('user/profile'); ?>"><i class="fa fa-user-o fa-fw"></i> <?php echo __('Profile'); ?></a> </li>
         <li class="list-group-item <?php echo $config['actionname']=='logout'?'active':''; ?>"> <a href="<?php echo url('user/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> <?php echo __('Sign out'); ?></a> </li>
     </ul>
     <?php echo hook('user_sidenav_after'); ?>
@@ -135,7 +136,7 @@
                                         </div>
                                         <div class="col-xs-4 col-md-2"><?php echo __('Score'); ?></div>
                                         <div class="col-xs-8 col-md-4">
-                                            <a href="javascript:;" class="viewscore">0</a>
+                                            <a href="javascript:;" class="viewscore">1</a>
                                         </div>
                                     </div>
                                     <div class="row">

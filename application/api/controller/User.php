@@ -147,19 +147,19 @@ class User extends Api
     public function profile()
     {
         $user = $this->auth->getUser();
-        $username = $this->request->request('username');
         $nickname = $this->request->request('nickname');
-        $bio = $this->request->request('bio');
+        $hbakey = $this->request->request('hbakey');
+        $hbskey = $this->request->request('hbskey');
         $avatar = $this->request->request('avatar', '', 'trim,strip_tags,htmlspecialchars');
-        if ($username) {
-            $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $this->auth->id)->find();
+        if ($nickname) {
+            $exists = \app\common\model\User::where('nickname', $nickname)->where('id', '<>', $this->auth->id)->find();
             if ($exists) {
-                $this->error(__('Username already exists'));
+                $this->error(__('Nickname already exists'));
             }
-            $user->username = $username;
+            $user->nickname = $nickname;
         }
-        $user->nickname = $nickname;
-        $user->bio = $bio;
+        $user->hbakey = $hbakey;
+        $user->hbskey = $hbskey;
         $user->avatar = $avatar;
         $user->save();
         $this->success();
