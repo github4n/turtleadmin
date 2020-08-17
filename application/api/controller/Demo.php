@@ -19,6 +19,7 @@ class Demo extends Api
     // 无需鉴权的接口,*表示全部
     protected $noNeedRight = ['test2'];
 
+
     /**
      * 测试方法
      *
